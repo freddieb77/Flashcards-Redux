@@ -33,18 +33,14 @@ const cardsSlice = createSlice({
   },
   reducers: {
     addCard: (state, action) => {
-      const { id, front, back } = action.payload;
-      state.cards[id] = {
-        id,
-        front,
-        back,
-      };
+      const { id } = action.payload;
+      state.cards[id] = action.payload;
     },
   },
 });
 
 export const { addCard } = cardsSlice.actions;
 // Selector
-export const selectCardById = (state, cardId) => state.cards.cards[cardId];;
+export const selectCardById = (state, id) => state.cards.cards[id];;
 // Reducer
 export default cardsSlice.reducer;
