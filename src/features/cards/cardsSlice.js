@@ -47,4 +47,4 @@ export const { addCard } = cardsSlice.actions;
 // Selector
 export const selectCardById = (state, cardId) => state.cards.cards[cardId];;
 // Reducer
-export default cardsSlice.recducer;
+export default cardsSlice.reducer;
