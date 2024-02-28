@@ -10,15 +10,15 @@ const topicsSlice = createSlice({
     addTopic: (state, action) => {
       const { id, name, icon } = action.payload;
       state.topics[id] = {
-        id,
-        name,
+        id: id,
+        name: name,
         icon,
         quizIds: [],
       };
     },
     associateQuizWithTopic: (state, action) => {
-      const {topicId, quizId} = action.payload;
-      state.topics[topicId].quizIds.push(quizId);
+      const {topicId, id} = action.payload;
+      state.topics[topicId].quizIds.push(id);
     },
   },
 });
