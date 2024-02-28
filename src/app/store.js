@@ -1,8 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
-// import reducers
-import topicsReducer from '../features/topics/topicsSlice.js';
-import quizzesReducer from '../features/quizzes/quizzesSlice.js';
-import cardsReducer from '../features/cards/cardsSlice.js';
+import topicsReducer from "../features/topics/topicsSlice";
+import quizzesReducer from "../features/quizzes/quizzesSlice";
+import cardsReducer from "../features/cards/cardsSlice";
 
 export default configureStore({
   reducer: {
